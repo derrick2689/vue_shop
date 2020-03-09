@@ -1,0 +1,127 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 11:07:36
+ * @LastEditTime: 2020-03-07 11:31:48
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\24 选择器-伪类target.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选择器-伪类target</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .nav {
+    position: fixed;
+    float: left;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .content {
+    position: relative;
+    float: right;
+    width: 80%;
+    height: 100%;
+  }
+  /* E:target  可以作为锚点目标元素添加样式，当目标元素被触发为当前锚链接的目标时，调用此类样式 */
+  h2:target{
+    color: orangered;
+    font-size: 30px;
+  }
+</style>
+
+<body>
+  <ul class="nav">
+    <li><a href="#title1">CSS教程简洁</a></li>
+    <li><a href="#title2">示例选择</a></li>
+    <li><a href="#title3">使用方法</a></li>
+    <li><a href="#title4">特点</a></li>
+    <li><a href="#title5">创建编辑</a></li>
+  </ul>
+  <div class="content">
+    <h2 id="title1">CSS教程简洁</h2>
+    <p>
+      本教程主要描述如何通过CSS来大大提升网页开发的工作效率！<br>在我们的 CSS 教程中，<br>您会学到如何使用 CSS 同时控制多重网页的样式和布局。
+    </p>
+    <p>
+      本 CSS 教程包含了数百个CSS在线实例，通过本站的在线编辑器，<br>你可以在线编辑CSS,并且可以在线查看修改后的效果。
+    </p>
+    <p>
+      温馨提示：如果您想通过边学边练的方式学习CSS，那么请您移步CSS微课！<br>
+
+      如果您觉得CSS的学习难度较高，不易理解，建议您采用视频教程进行学习：CSS视频课程<br>
+
+      学完本教程之后，W3Cschool推荐您进行实战练习：CSS实战<br>
+    </p>
+    <h2 id="title2">示例选择</h2>
+    <p>
+      本教程主要描述如何通过CSS来大大提升网页开发的工作效率！<br>在我们的 CSS 教程中，您会学到如何使用 CSS 同时控制多重网页的样式和布局。
+    </p>
+    <p>
+      本 CSS 教程包含了数百个CSS在线实例，通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。
+    </p>
+    <p>
+      温馨提示：如果您想通过边学边练的方式学习CSS，那么请您移步CSS微课！<br>
+
+      如果您觉得CSS的学习难度较高，不易理解，建议您采用视频教程进行学习：CSS视频课程<br>
+
+      学完本教程之后，W3Cschool推荐您进行实战练习：CSS实战<br>
+    </p>
+    <h2 id="title3">使用方法</h2>
+    <p>
+      本教程主要描述如何通过CSS来大大提升网页开发的工作效率！<br>在我们的 CSS 教程中，您会学到如何使用 CSS 同时控制多重网页的样式和布局。
+    </p>
+    <p>
+      本 CSS 教程包含了数百个CSS在线实例，通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。
+    </p>
+    <p>
+      温馨提示：如果您想通过边学边练的方式学习CSS，那么请您移步CSS微课！<br>
+
+      如果您觉得CSS的学习难度较高，不易理解，建议您采用视频教程进行学习：CSS视频课程<br>
+
+      学完本教程之后，W3Cschool推荐您进行实战练习：CSS实战<br>
+    </p>
+    <h2 id="title4">特点</h2>
+    <p>
+      本教程主要描述如何通过CSS来大大提升网页开发的工作效率！<br>在我们的 CSS 教程中，您会学到如何使用 CSS 同时控制多重网页的样式和布局。
+    </p>
+    <p>
+      本 CSS 教程包含了数百个CSS在线实例，通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。<br>
+    </p>
+    <p>
+      温馨提示：如果您想通过边学边练的方式学习CSS，那么请您移步CSS微课！<br>
+
+      如果您觉得CSS的学习难度较高，不易理解，建议您采用视频教程进行学习：CSS视频课程<br>
+
+      学完本教程之后，W3Cschool推荐您进行实战练习：CSS实战<br>
+    </p>
+    <h2 id="title5">创建编辑</h2>
+    <p>
+      本教程主要描述如何通过CSS来大大提升网页开发的工作效率！<br>在我们的 CSS 教程中，您会学到如何使用 CSS 同时控制多重网页的样式和布局。
+    </p>
+    <p>
+      本 CSS 教程包含了数百个CSS在线实例，通过本站的在线编辑器，你可以在线编辑CSS,并且可以在线查看修改后的效果。<br>
+    </p>
+    <p>
+      温馨提示：如果您想通过边学边练的方式学习CSS，那么请您移步CSS微课！<br>
+
+      如果您觉得CSS的学习难度较高，不易理解，建议您采用视频教程进行学习：CSS视频课程<br>
+
+      学完本教程之后，W3Cschool推荐您进行实战练习：CSS实战<br>
+    </p>
+  </div>
+
+
+</body>
+
+</html>

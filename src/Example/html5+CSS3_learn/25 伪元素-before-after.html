@@ -1,0 +1,62 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 12:10:40
+ * @LastEditTime: 2020-03-07 16:27:54
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\25 伪元素-before-after.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    padding: 200px;
+  }
+  div:nth-of-type(1) {
+    width: 300px;
+    height: 200px;
+    background-color: orangered;
+    float: left;
+  }
+  div:nth-of-type(2) {
+    width: 100px;
+    height: 200px;
+    background-color: blue;
+    float: left;
+    position: relative;
+  }
+  div:nth-of-type(2)::before{
+    /* 必须添加content属性，否则后期不可见 */
+    content:" " ;
+    /* 默认是行级元素，如果想设置宽高，就必须转为块级元素 */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    left: -10px;
+    top: -10px;
+  }
+  div:nth-of-type(2)::after{
+    /* 必须添加content属性，否则后期不可见 */
+    content:" " ;
+    /* 默认是行级元素，如果想设置宽高，就必须转为块级元素 */
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    left: -10px;
+    bottom: -10px;
+  }
+</style>
+<body>
+  <div></div>
+  <div></div>
+</body>
+</html>

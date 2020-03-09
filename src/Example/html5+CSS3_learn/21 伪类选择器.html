@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-06 22:25:06
+ * @LastEditTime: 2020-03-06 22:37:50
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\21 伪类选择器.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪类选择器器</title>
+</head>
+<style>
+  .first {
+    color: red;
+  }
+
+  /* 兄弟伪类
+  +：获取当前元素的相邻的满足条件的元素；
+  ~：获取当前元素的满足条件的兄弟元素*/
+
+  /* 下面这句样式说明查找：添加了.first样式的标签的相邻的li元素
+  1.相邻
+  2.必须是指定类型的元素
+   */
+   .first + li {
+     color: blue;
+   }
+   /* 下面样式查找添加了.first样式的元素的所有兄弟元素
+   1.必须是指定类型的元素 */
+   .first ~ li {
+    color: pink;
+   }
+</style>
+<body>
+  <ul>
+    <li class="first">前端与移动开发</li>
+    <span>看一下能否变色</span>
+    <li>java</li>
+    <li>javascript</li>
+    <li>C++</li>
+    <li>平面设计</li>
+  </ul>
+  
+</body>
+</html>

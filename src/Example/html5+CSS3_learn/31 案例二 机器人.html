@@ -1,0 +1,126 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-06 23:02:22
+ * @LastEditTime: 2020-03-07 21:24:49
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\22 边框阴影.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>机器人</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-color: #ccc;
+  }
+
+  .content {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    margin: 50px auto;
+  }
+
+  .an_header {
+    width: 250px;
+    height: 125px;
+    background-color: darkgreen;
+    margin: 10px auto;
+    /* 添加圆角 */
+    border-radius: 125px 125px 0 0;
+    position: relative;
+  }
+
+  /* 使用伪元素添加眼睛 */
+  .an_header::after,
+  .an_header::before {
+    /* 1.一定要设置content属性 */
+    content: "";
+    /* 2.如果需要设置宽度就应该将其转换为块级元素，他默认是行级元素 */
+    position: absolute;
+    bottom: 40px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+
+  .an_header::before {
+    left: 70px;
+  }
+
+  .an_header::after {
+    right: 70px;
+  }
+
+  .an_body {
+    width: 250px;
+    height: 250px;
+    background-color: darkgreen;
+    border-radius: 0 0 20px 20px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .an_body::before,
+  .an_body::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    background-color: darkgreen;
+    width: 30px;
+    height: 180px;
+    border-radius: 10px;
+  }
+
+  .an_body::before {
+    left: -40px;
+  }
+
+  .an_body::after {
+    right: -40px;
+  }
+  .an_footer{
+    width: 250px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    /* background-color: darkgrey; */
+  }
+  .an_footer::before,
+  .an_footer::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    background-color: darkgreen;
+    width: 30px;
+    height: 90px;
+    border-radius: 0 0 10px 10px;
+  }
+  .an_footer::before {
+    left: 50px;
+  }
+  .an_footer::after{
+    right: 50px;
+  }
+</style>
+
+<body>
+  <div class="content">
+    <div class="an_header"></div>
+    <div class="an_body"></div>
+    <div class="an_footer"></div>
+  </div>
+</body>
+
+</html>

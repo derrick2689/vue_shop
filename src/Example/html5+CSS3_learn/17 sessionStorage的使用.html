@@ -1,0 +1,50 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-05 19:55:49
+ * @LastEditTime: 2020-03-05 21:09:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\17 sessionStorage的使用.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sessionStorage的使用</title>
+</head>
+<body>
+  sessionStorage的使用：存储数据到本地。 存储的容量5mb左右 ，<br>
+  <br> 1.这个数据本质存储在当前页面的浏览器中 
+       2.它的生命周期为关闭当前页面，关闭页面，数据会自动清除；
+       <br>
+  setItem(key,value):存储数据，以键值对的方式存储；
+  getItem(key): 获取数据，通过制定名称的key获取对应的value值
+  removeItem(key): 删除数据，通过制定名称的key删除对应的值
+  clear(): 清空所有的存储内容；<br>
+  <input type="text" id="username"><br>
+  <input type="button" value="设置数据" id="setData">
+  <input type="button" value="获取数据" id="getData">
+  <input type="button" value="删除数据" id="removeData">
+
+  <script>
+    document.querySelector("#setData").onclick=function(){
+      // 获取用户名
+      let name = document.querySelector("#username").value;
+      // 存储数据
+      window.sessionStorage.setItem("username",name)
+    }
+    // 获取数据
+    document.querySelector("#getData").onclick=function(){
+      let name = window.sessionStorage.getItem("username")
+      alert(name)
+    }
+
+    // 删除数据
+    document.querySelector("#removeData").onclick=function(){
+      // 在删除的时候，如果key值错误，则不会报错，也不会删除
+      window.sessionStorage.removeItem("username")
+    }
+  </script>
+</body>
+</html>

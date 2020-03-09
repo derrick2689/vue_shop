@@ -1,0 +1,62 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 16:29:59
+ * @LastEditTime: 2020-03-07 17:17:40
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\28 文本阴影.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>文本阴影</title>
+</head>
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .demo {
+    width: 600px;
+    padding: 30px;
+    margin: 20px auto;
+    font-size: 30px;
+    background-color: #666;
+    text-align: center;
+    color: #fff;
+    /* 微软雅黑 */
+    font: bold 80px/100%;
+  }
+  /* 添加阴影 text-shadow:offsetx offsety blur color */
+  .demo1 {
+    text-shadow: -2px -2px 5px red;
+  }
+  .demo2 {
+    text-shadow: 0px 0px 30px #fff;
+  }
+  .demo3 {
+    text-shadow: 0px 0px 30px #fff,0px 0px 50px red,0px 0px 70px #fff;
+  }
+  .demo4 {
+    text-shadow: 0px 1px 0px #fff;
+    color: black;
+  }
+  /* 浮雕立体效果 */
+  .demo5 {
+    text-shadow: -1px -1px 0px #eee,-2px -2px 0px #ddd,-3px -3px 0px #ccc
+  }
+</style>
+
+<body>
+  <div class="demo demo1">今天你努力了吗？</div>
+  <div class="demo demo2">今天你努力了吗？</div>
+  <div class="demo demo3">今天你努力了吗？</div>
+  <div class="demo demo4">今天你努力了吗？</div>
+  <div class="demo demo5">今天你努力了吗？</div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 14:43:57
+ * @LastEditTime: 2020-03-07 14:55:07
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\26 其他伪元素.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>其他伪元素</title>
+</head>
+<style>
+  /* 获取第一个字符：实现首字下沉 */
+  p::first-letter {
+    color: orangered;
+    font-size: 30px;
+    float: left;     /* 文本环绕 */
+  }
+  
+  /* 获取第一行内容：如果设置了 ::first-letter ,那么无法同时设置他的样式*/
+  P::first-line {
+    text-decoration: underline;
+  }
+
+  /* 设置当前选中内容的样式 */
+  P::selection {
+    background-color:seagreen;
+    color: yellow;
+    /* 他只能设置显示的样式，而不能设置内容大小 */
+    /* font-size: 30px; */
+  }
+</style>
+
+<body>
+ <p>
+   少壮不努力，老大徒伤悲;<br>
+   我心有猛虎，细嗅蔷薇;
+ </p> 
+</body>
+</html>

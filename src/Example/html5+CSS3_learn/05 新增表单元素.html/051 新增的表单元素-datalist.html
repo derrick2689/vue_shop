@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-04 15:24:01
+ * @LastEditTime: 2020-03-04 15:50:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\05 新增的表单元素.html
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>新增表单元素</title>
+ </head>
+ <body>
+   <form action="">
+      专业：
+      <select>
+        <option value="1">前端移动开发</option>
+        <option value="2">Java</option>
+        <option value="3">Python</option>
+        <option value="4">C++</option>
+      </select>
+      <br><hr>
+      <!-- 不仅要可以选择，还可以输入 -->
+      专业：<input type="text" list="optionList">
+      <!-- 通过datalist创建列表 -->
+      <!-- 建立输入框和与datalist的关联  list="datalist的id号" -->
+      <!-- 不建议常用：因为浏览兼容性不同 -->
+      <datalist id="optionList">
+        <!-- 创建选项值： value:是具体的值；lable:提示信息，辅助值 -->
+        <!-- option:可以是单标签，也可以是双标签 -->
+        <option value="英语"  label="学的号" />
+        <option value="前端与移动开发" label="前景非常好"></option>
+        <option value="Java" label="使用人数多"></option>
+        <option value="Python" label="应用范围广"></option>
+        <option value="C++" label="不知奥"></option>
+      </datalist>
+      <br><hr>
+      网址：<input type="url" list="urlList">
+      <datalist id="urlList">
+        <!-- 如果input的输入框的类型是url,那么value值就必须添加http:// -->
+        <option value="http:www.baidu.com" label="百度"></option>
+        <option value="http:www.233.com"></option>
+        <option value="http:www.33333.com"></option>
+      </datalist>
+   </form>
+   
+ </body>
+ </html>

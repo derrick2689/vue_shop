@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 17:39:07
+ * @LastEditTime: 2020-03-07 20:07:57
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\29 盒模型.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>盒子模型</title>
+</head>
+<style>
+  .box {
+    width: 600px;
+    height: 200px;
+    background-color: red;
+    margin: 100px auto;
+  }
+  .left {
+    /* 默认情况下:width仅仅是内容的宽度 */
+    width: 250px;
+    height: 100%;
+    background-color: blueviolet;
+    float: left;
+    /* 添加内间距 */
+    padding-left: 20px;
+    border-right: 10px solid green;
+    /* 设置盒模型 */
+    /* 1.content-box:你设置的width属性值仅仅是内容的宽度，盒子的最终的宽高值在width的基础上
+                    再加上padding和border的宽度；
+       2.border-box: 你设置的width属性值就是盒子的最终宽度，包含了border和padding和内容。
+                    如果添加了padding和border，那么真正放置内容的区域会减小---但是他可以稳固
+                    页面的结构
+     */
+     box-sizing: border-box;
+  }
+  .right {
+    width: 250px;
+    height: 100%;
+    background-color:crimson;
+    float: left;
+  }
+</style>
+<body>
+  <div class="box">
+    <div class="left">所有HTML元素可以看作盒子，在CSS中，"box model"这一术语是用来设计和布局时使用。
+
+      CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：边距，边框，填充，和实际内容。
+      
+      盒模型允许我们在其它元素和周围元素边框之间的空间放置元素。</div>
+    <div class="right"></div>
+  </div>
+</body>
+</html>

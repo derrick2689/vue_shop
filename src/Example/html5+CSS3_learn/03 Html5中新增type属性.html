@@ -1,0 +1,50 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-04 10:45:21
+ * @LastEditTime: 2020-03-04 12:19:09
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\03 Html5中新增type属性.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Type属性介绍</title>
+</head>
+<body>
+  <form action=""> 
+    用户名：<input type="text" name="username"><br>
+    密码：<input type="password" name="password"><br>
+    <!-- email提供了默认的电子邮箱的完整验证,要求必须含@符号，同时必须包含服务器名称，如果不，则会阻止当前的数据提交 -->
+    邮箱：<input type="email"> <br>
+    <!-- tel 他并不是来实现验证。他的本质目的是为了能够在移动端打开数字键盘，意味着数字键盘限制了用户只能输入数字
+    如何查看效果：qq发送文件 >>手机端qq接收 >>使用浏览器查看 -->
+    电话：<input type="tel"><br>
+    <!-- 验证只能输入网址，包含http:// -->
+    网址：<input type="url"><br>
+    <!-- number: 只能输入数字，不能输入其他的字符
+    max:最大值
+    min:最小值
+    value: 默认值 -->
+    数量：<input type="number" max="100" min="0" value="88"><br>
+    <!-- search 可以提供更人性化的操作（带清空符号） -->
+    请输入商品名称：<input type="search"><br>
+    范围：<input type="range" max="100" min="0" value="50"><br>
+    颜色：<input type="color"><br>
+    <!-- 日期时间相关 -->
+    时间：<input type="time"><br>
+    日期: <input type="date"><br>
+    <!-- 注意：datetime:大多数浏览器不能支持datatime,只能苹果下safair支持 -->
+    日期时间：<input type="datetime"><br>
+    日期时间：<input type="datetime-local"><br>
+    月份：<input type="month"><br>
+    星期：<input type="week">
+
+    <!-- 提交 -->
+    <br>
+    <input type="submit">
+  </form>
+</body>
+</html>

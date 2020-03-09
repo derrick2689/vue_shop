@@ -1,0 +1,61 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-04 16:48:05
+ * @LastEditTime: 2020-03-04 20:14:38
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\08 案例一.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/案例一.css">
+  <title>学生档案</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>学生档案</legend>
+      <label for="username">姓名：</label>
+      <input type="text" name="username" id="username" placeholder="请输入用户名">
+      
+      <label for="usertel">手机号码：</label>
+      <input type="tel" name="usertel" id="usertel" pattern="^\(10)$">
+
+      <label for="useremal">邮箱地址：</label>
+      <input type="email" name="useremail" id="useremail" required>
+
+      <label for="userschool">所属学院：</label>
+      <input type="search" list="userslect" name="userschool" id="userschool" placeholder="请选择">
+      <datalist name="userslect" id="userslect"> 
+        <option value="化工学院"></option>
+        <option value="计算机学院"></option>
+        <option value="理学院"></option>
+      </datalist>
+
+      <label for="userresult">入学成绩：</label>
+      <input type="number" name="userresult" id="userresult" min="0" max="100" value="0">
+   
+      <label for="userlaver">基础水平：</label>
+      <!-- <input type="range" name="userlaver" id="userlaver" max="10" min="0" value="3"> -->
+      <meter id="userlaver" max="100" min="0" high="80" low="60"></meter>
+
+      <label for="userenter">入学日期：</label>
+      <input type="date" name="userenter" id="userenter">
+      
+      <label for="userleave">毕业日期</label>
+      <input type="date" name="userleaver" id="userleaver">
+
+      <input type="submit" value="提交">
+    </fieldset>
+  </form>
+
+  <script>
+    document.getElementById("userresult").oninput = function(){
+      document.getElementById("userlaver").value = this.value;
+    }
+  </script>
+</body>
+</html>

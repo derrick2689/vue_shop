@@ -1,0 +1,81 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-04 21:44:50
+ * @LastEditTime: 2020-03-05 10:14:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\11 类样式操作.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>类样式操作</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .green {
+      color: green;
+    }
+
+    .blue {
+      color: blue;
+    }
+
+    .underline {
+      text-decoration: underline pink;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>前端与移动开发</li>
+    <li class="green">Javascript</li>
+    <li>Python</li>
+    <li>后台管理</li>
+  </ul>
+
+  <input type="button" value="为第一个li元素添加样式" id="add">
+  <input type="button" value="为第二个li元素移除样式" id="remove">
+  <input type="button" value="为第三个li元素切换样式" id="toggle">
+  <input type="button" value="判断第四个元素是否包含某个样式" id="contain">
+
+  <script>
+    window.onload = function () {
+      // add：为元素添加指定名称的样式  一次只能添加一个样式
+      document.querySelector("#add").onclick = function () {
+        // classList:表示当前元素的所有样式列表--数组
+        document.querySelector("li").classList.add("red");
+        document.querySelector("li").classList.add("underline");
+      };
+
+
+      // remove: 为元素移除指定名称的样式(不是移除class属性)  一次只能移除一个样式
+      document.querySelector("#remove").onclick = function () {
+        document.querySelector(".green").classList.remove("green")
+      }
+
+      // toggle: 切换元素样式，如果元素之前没有指定名称样式则添加，如果有则移除
+      document.querySelector("#toggle").onclick=function() {
+        document.querySelectorAll("li")[2].classList.toggle("blue")
+      }
+      // contains: 判断元素是否包含指定名称的样式，返回true/false 
+      document.querySelector("#contain").onclick= function() {
+        let isContain = document.querySelectorAll("li")[3].classList.contains("red")
+        console.log(isContain)
+        if (isContain !== true) {
+          document.querySelectorAll("li")[3].classList.add("red")
+        }
+      }
+      
+    }
+  </script>
+
+</body>
+
+</html>

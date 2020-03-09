@@ -1,0 +1,30 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-05 11:22:13
+ * @LastEditTime: 2020-03-05 11:27:44
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\12 网络接口.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网络接口</title>
+</head>
+<body>
+  <script>
+    //ononline:网络连通的时候会触发这个事件
+    
+    window.addEventListener("online",function() {
+      alert("网络连通了")
+    })
+    // onoffline:网络断开时触发
+    window.addEventListener("offlinen",function(){
+      alert("网络断开了")
+    })
+  </script>
+  
+</body>
+</html>

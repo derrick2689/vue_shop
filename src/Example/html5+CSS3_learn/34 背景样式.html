@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-08 09:27:39
+ * @LastEditTime: 2020-03-08 09:53:19
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\34 背景样式.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>背景样式</title>
+</head>
+<style>
+  div{
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    /* overflow: scroll;    设置背景固定或滚动时要添加 */
+    /* 1.添加背景颜色 */
+    /* background-color: blue; */
+    /* 2. 添加背景图片 
+          如果图片大于容器，那么默认就从容器左上角开始放置；
+          如果图片小于容器，那么图片就会默认平铺；
+    */
+    /* background-image: url("../img/1.jpg"); */
+    /* 3. 设置背景平铺 
+          round: 会将图片进行缩放之后再平铺；
+          space: 图片不会缩放平铺，只是会在图片之间产生相同的间距值
+    */
+    /* background-repeat: space; */
+    /* 4.设置在滚动容器的背景行为：跟随滚动/固定 
+          fixed: 背景图片的位置固定不变；
+          scroll: 当滚动容器的时候，背景图片也会跟随滚动；
+
+          ## local和scroll的区别：前提是滚动当前容器的内容
+          local: 背景图片会跟随内容一起滚动；
+          scroll: 背景图片不会跟随内容一起滚动；
+    */
+    background-attachment: scroll;
+  }
+</style>
+<body>
+  <div></div>
+</body>
+</html>

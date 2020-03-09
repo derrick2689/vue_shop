@@ -1,0 +1,57 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 22:12:11
+ * @LastEditTime: 2020-03-07 22:51:16
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\32 线性渐变.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>线性渐变</title>
+</head>
+<style>
+  div {
+    width: 300px;
+    height: 200px;
+    /* 线性渐变 */
+    /* 添加渐变：渐变不是一个单一钩，它产生的是图像 ，所以需要使用background*/
+    /* linear-gradient(方向, 开始颜色 位置, 颜色2 位置, 颜色3 位置,..... );
+    方向：
+        to top: 0deg;
+        to right:90deg;
+        to bottom:180deg; 默认值
+        to left:270deg;
+     */
+    /* background: linear-gradient(to right,red,blue); */
+    /* background: linear-gradient(to right,red 0%,red 50%,blue  50%,blue 100%); */
+
+    /* 径向渐变 */
+    /* 添加径向渐变：产生的也是图像 */
+    /* 语法：radial-gradient(形状 大小 坐标)：
+        形状shape:circle:产生正方形的渐变色；
+                  ellipse:适配当前的形状，如果是正方形容器，两者效果相同；
+        at position:坐标，默认在中心。可以赋值坐标（参照元素的左上角），也可以辅值关键字（left center right top bottom）;
+        大小size: closest-side:最近边    farthest-side:最远边     closest-cornet:最近角    farthest-cornet:最远角。
+                  默认是最远的farthest-cornet
+     */
+    /* background: radial-gradient(circle,red,blue) */
+    /* background: radial-gradient(circle farthest-side at 50px 50px, red, blue) */
+      /* background: radial-gradient(at left top,red,blue); */
+
+      /* 设置颜色的位置 */
+      background: radial-gradient(red,red 50%, blue 50%, blue);
+
+
+  }
+</style>
+
+<body>
+  <div></div>
+</body>
+
+</html>

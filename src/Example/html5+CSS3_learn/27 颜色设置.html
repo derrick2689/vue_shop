@@ -1,0 +1,52 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-07 14:56:00
+ * @LastEditTime: 2020-03-07 16:24:24
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\27 颜色设置.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>颜色设置</title>
+</head>
+<style>
+  *{
+    padding: 0;
+    margin: 0;
+  }
+  div {
+    width: 200px;
+    height: 200px;
+    border:1px solid #cccccc;
+    /* 1.使用预设值 */
+    /* background-color: red; */
+    /* 2.使用颜色拾取器 */
+    /* background-color: #ffffff; */
+    /* 3.使用rbg(红,绿,蓝) */
+    /* background-color: rgb(255, 150, 0); */
+    /* 4.使用hsl(颜色(0~360),饱和度(0%~100%),明度(0%~100%)) */
+    /* 注意：明度默认是50% ；一般建议保留50%*/
+    /* background-color: hsl(160, 100%, 50%); */
+    /* 5.设置透明度 */
+    /* opacity: 0.2; 只能针对整个盒子设置透明度，子盒子及内容会继承父盒子的透明度；
+                  其设置透明度会覆盖掉子元素的样式 ；
+        transparent: 不可调节透明度 ，始终完全透明；
+        使用rgba来控制颜色，相对opacity,不具有继承性；
+    */
+    /* background-color::rgba(红色, 绿色, 蓝色, 透明度)
+    透明度：0 ：代表完全透明； 1：代表完全不透明  特点：不会影响子元素*/
+    /* background-color: rgba(0, 0, 255, 0.8); */
+    background-color:hsla(300, 100%, 50%, 0.4);
+    margin: 100px auto;
+    color: yellow;
+
+  }
+</style>
+<body>
+  <div>这是内容</div>
+</body>
+</html>

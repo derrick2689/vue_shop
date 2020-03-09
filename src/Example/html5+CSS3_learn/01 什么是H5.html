@@ -1,0 +1,47 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-04 09:30:41
+ * @LastEditTime: 2020-03-04 10:43:25
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\01 什么是H5.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>什么是H5</title>
+</head>
+
+<body>
+  <p>
+    1. H5 并不是新的语言，而是Html 的第五次修改；<br>
+    2.支持：所有的主流浏览器都支持H5 (chrom,firefox,ssafari ...); IE9及以上支持H5（是有选择的支持，并不是全部支持）,但是IE8及以下不支持；<br>
+    1. H5 并不是新的语言，而是Html 的第五次修改；<br>
+      1>IE9：行级元素在设置宽度的时候是失效<br>
+      2>IE8: 完全不支持语义标签（不支持html5）: 在IE8 中，他不认识语义标签，所以无法解析这些标签，也就意味着所写的样式无效；<br>
+      解决方法一：加入{<br>
+      <script>
+        // 手动创建标签：默认的标签的类型都是行级元素
+        document.createElement("header");
+        document.createElement("nav")
+      </script>}<br>
+        并在相应标签样式中加入：{display: block;}<br>
+      解决方法二：引入第三方插件：<br>
+      html5shiv.min.js:在默认情况下，IE8及以下的IE版本不支持HTML5，引入这个就可以做到兼容<br>
+      {
+        <script src="../js/html5shiv.min.js"></script>
+      }<br>
+    3. 改变了用户与文档的交互方式：多媒体，video，audio，canvas,<br>
+    4. 增加了其他新特性：语义特性、本地存储特性、网页多媒体、二维三维，特效（过渡，动画）<br>
+    5. 相对于h4:<br>
+    1>进步：抛弃了一些不合理不常用的标记和属性；<br>
+    2>新增一些标记和属性 ————表单<br>
+    3>从代码角度而言，H5的网页结构代码更简洁；<br>
+  </p>
+  <p><strong>注意:</strong>新建H5标签页面，需按："html:5" ,然后回车即可</p>
+</body>
+
+</html>

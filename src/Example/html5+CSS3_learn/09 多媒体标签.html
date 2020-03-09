@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-04 20:17:58
+ * @LastEditTime: 2020-03-04 21:03:53
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \my-project\src\Example\html5+CSS3_learn\09 多媒体标签.html
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>多媒体标签</title>
+</head>
+
+<body>
+  <!-- embed:直接插入视频文件：他的本质是调用本机上已经安装的软件，有兼容性 -->
+  <!-- flash插件: 安装flash 1.要学习flash，增加使用成本；苹果设备不支持flash -->
+  <!-- audio: 音频
+      src:指播放音频文件的路径
+      controls:音频播放器的控制器面板
+      autoplay:自动播放 
+      loop:循环播放-->
+  <audio src="../music/星辰大海.mp3" controls autoplay>歌曲播放</audio>
+  <br>
+  <hr>
+  <!-- video:视频 -->
+  <!-- src:指播放音频文件的路径
+    control:音频播放器的控制器面板
+    autoplay:自动播放 
+    loop:循环播放
+    width:宽度
+    height:高度
+    注意事项：当设置宽高的时候：一般情况下只会设置宽度或者高度，让其自动等比缩放，如果同时设置宽度
+    和高度，那么视频并不会真正的调整到设置的宽高，除非设置的值刚好是等比例的；
+    poster:当视频还没有完全下载，或者用户还没有点击播放前的默认显示的封面。
+            默认显示当前视频文件的第一幅封面 -->
+  <video src="../video/离家.mp4" controls poster="../img/1.jpg" width="400px" height="300px"></video>
+  <br>
+  <hr>
+  <!-- 重点说明source的使用：因为不同的浏览器支持的视频文件格式不一样，所以我们在进行视频添加的时候
+  需要重新考虑浏览器是否支持。我们可以准备多个格式的视频文件，让浏览器自动选择 -->
+  <video controls>
+    <source src="../video/坐车.flv" type="video/flv">
+    <source src="../video/坐车.mp4" type="video/mp4">
+     您的浏览器不支持当前的视频播放   
+  </video>
+</body>
+</html>
